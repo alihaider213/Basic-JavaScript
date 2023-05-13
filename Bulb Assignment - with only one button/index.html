@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="https://thumbs.gfycat.com/BlindAstonishingAfricanelephant-size_restricted.gif"
+    type="image/x-icon" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Bulb Assignment</title>
+</head>
+
+<body>
+
+  <h1>on/off Bulb</h1>
+  <div style="text-align: center">
+    <img id="bulb" src="images/offbulb.jpg" style="max-width: 239; max-height: 292" alt="off bulb" class="img-fluid"
+    onclick="document.getElementById('bulb').src = 'images/onbulb.jpg'"
+    ondblclick="document.getElementById('bulb').src = 'images/offbulb.jpg'"
+    />
+    <br />
+    <button class="btn btn-primary" onclick="myFunction()">
+      Turn ON/OFF
+    </button>
+
+
+
+    <!-- <button
+        class="btn btn-danger"
+        onclick="document.getElementById('bulb').src = 'images/off bulb.jpg' "
+      >
+        Turn off the Bulb
+      </button> -->
+  </div>
+
+  <script>
+    var toggle = false
+    function myFunction() {
+      var x = document.getElementById('bulb')
+
+      if (toggle === true) {
+        x.src = "images/offbulb.jpg"
+      } else {
+        x.src = "images/onbulb.jpg"
+      }
+      toggle = !toggle
+    }
+
+  </script>
+</body>
+
+</html>
